@@ -1,0 +1,19 @@
+<import src="post-item/post-item-template.wxml"/>
+<view>
+  <swiper catchtap='toPostDetail2' indicator-dots="true" autoplay='true' interval='5000' current='1' circular="true">
+    <swiper-item>
+      <image src="/images/avatar.jpg" data-post-id="0"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="/images/cc.jpg" data-post-id="1"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="/images/Tulips.jpg" data-post-id="2"></image>
+    </swiper-item>
+  </swiper>
+  <block wx:for="{{postList}}">
+    <view bindtap="toPostDetail" data-post-id="{{item.postId}}">
+      <template is="postItem" data="{{...item}}"></template>
+    </view>
+  </block>
+</view>
