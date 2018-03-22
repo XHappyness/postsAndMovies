@@ -2,12 +2,12 @@
 <import src="movie-list/movie-list-template.wxml" />
 <view class="container">
   <view class="template-contianer">
-    <template is="movieListTemplate" />
+    <template is="movieListTemplate" data="{{...inTheaters}}" />
   </view>
   <view class="template-contianer">
-    <template is="movieListTemplate" />
+    <template is="movieListTemplate" data="{{...comingSoons}}" />
   </view>
   <view class="template-contianer">
-    <template is="movieListTemplate" />
+    <template is="movieListTemplate" data="{{...top250}}" />
   </view>
 </view>

@@ -12,5 +12,5 @@
 
 .movie-name {
   font-size: 24rpx;
-  margin-bottom: 24rpx;
+  margin-bottom: 20rpx;
 }

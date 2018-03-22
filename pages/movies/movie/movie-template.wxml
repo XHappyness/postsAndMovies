@@ -1,8 +1,8 @@
 <import src="../star/star-template.wxml"/>
 <template name="movieTemplate">
   <view class="flex-column movie-container">
-    <image src="/images/vr.png" class="movie-img"></image>
-    <text class="movie-name">你的名字</text>
-    <template is="starTemplate" />
+    <image src="{{image}}" class="movie-img"></image>
+    <text class="movie-name">{{title}}</text>
+    <template is="starTemplate" data="{{stars:stars,score:average}}"/>
   </view>
 </template>

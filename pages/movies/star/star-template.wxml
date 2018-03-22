@@ -1,12 +1,12 @@
 <template name="starTemplate">
   <view class="flex-row">
     <view class="star-img flex-row">
-      <image src="/images/icon/star.png"></image>
-      <image src="/images/icon/star.png"></image>
-      <image src="/images/icon/star.png"></image>
-      <image src="/images/icon/star.png"></image>
-      <image src="/images/icon/star.png"></image>
+      <block wx:for="{{stars}}" wx:key="{{item}}">
+        <image wx:if="{{item==1}}" src=" /images/icon/star.png"></image>
+        <image wx:elif="{{item==0.5}}" src=" /images/icon/star-half.png"></image> 
+        <image wx:else src=" /images/icon/none-star.png"></image>         
+      </block>
     </view>
-    <text class="score-text">8.5</text>
+    <text class="score-text ">{{score}}</text>
   </view>
 </template>

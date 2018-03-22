@@ -1,0 +1,11 @@
+<import src="../movie/movie-template.wxml" />
+<template name="movieGridTemplate">
+    <view class="movie-grid-container">
+      <block wx:for="{{movies}}" wx:key="{{item}}">
+        <view class="movie">
+          <template is="movieTemplate" data="{{...item}}" />
+        </view>
+      </block>
+      <text class="has-no-more" wx:if="{{hasNoMore}}">没有更多了</text>
+    </view>
+</template>

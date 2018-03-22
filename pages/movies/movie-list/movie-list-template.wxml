@@ -4,16 +4,16 @@
 
     <view class="movie-list-inner">
       <view class="movie-list-header">
-        <text class="movie-list-slogan">正在热映</text>
-        <view class="more">
+        <text class="movie-list-slogan">{{categoryTitle}}</text>
+        <view class="more" catchtap="toMoreMovies" data-category="{{categoryTitle}}">
           <text class="more-text">更多</text>
           <image src="/images/icon/arrow-right.png" class="more-img"></image>
         </view>
       </view>
       <view class="flex-row">
-        <template is="movieTemplate" />
-        <template is="movieTemplate" />
-        <template is="movieTemplate" />
+        <block wx:for="{{movies}}" wx:key="{{move.movieId}}" wx:for-item="movie">
+          <template is="movieTemplate" data="{{...movie}}" />
+        </block>
       </view>
     </view>
 
