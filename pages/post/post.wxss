@@ -9,3 +9,7 @@ swiper image {
   height: 100%;
 }
 
+.container {
+  background-color: #F2F2F2;
+}
+

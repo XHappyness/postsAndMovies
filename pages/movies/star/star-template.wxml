@@ -1,0 +1,12 @@
+<template name="starTemplate">
+  <view class="flex-row">
+    <view class="star-img flex-row">
+      <image src="/images/icon/star.png"></image>
+      <image src="/images/icon/star.png"></image>
+      <image src="/images/icon/star.png"></image>
+      <image src="/images/icon/star.png"></image>
+      <image src="/images/icon/star.png"></image>
+    </view>
+    <text class="score-text">8.5</text>
+  </view>
+</template>

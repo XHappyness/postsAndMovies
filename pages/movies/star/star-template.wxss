@@ -1,0 +1,14 @@
+.star-img {
+  margin-right: 24rpx;
+}
+
+.star-img image {
+  width: 17rpx;
+  height: 17rpx;
+  margin-right: 3px;
+  margin-top: 3px;
+}
+
+.score-text {
+  color: #1f3463;
+}
