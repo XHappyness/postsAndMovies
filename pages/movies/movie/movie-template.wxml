@@ -1,6 +1,7 @@
 <import src="../star/star-template.wxml"/>
 <template name="movieTemplate">
-  <view class="flex-column movie-container">
+  <view class="flex-column movie-container" bindtap="toMovieDetail" 
+  data-movie-id="{{movieId}}">
     <image src="{{image}}" class="movie-img"></image>
     <text class="movie-name">{{title}}</text>
     <template is="starTemplate" data="{{stars:stars,score:average}}"/>

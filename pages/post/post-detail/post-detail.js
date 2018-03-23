@@ -68,6 +68,8 @@ Page({
       app.globalData.g_isPlayingMusic = false;
       // app.globalData.g_currentMusicPostId = null;
     });
+
+    //监听音乐播放完，将页面的图标设置为暂停状态
     wx.onBackgroundAudioStop(function () {
       that.setData({
         isPlayingMusic: false

@@ -1,6 +1,13 @@
 <!--pages/movies/movies.wxml-->
 <import src="movie-list/movie-list-template.wxml" />
-<view class="container">
+<import src="movie-grid/movie-grid-template.wxml" />
+<view class="search-container">
+  <icon type="search" size="13" color="#405f80" class="search-img"></icon>
+  <input type="text" placeholder="请输入电影名称（含‘无’则没数据）" placeholder-class="placeholder" value="{{inputValue}}" confirm-type="search" bindfocus="showSearchPage" bindconfirm="onbindConfirm" bindinput="onbindInput"/>
+  <image src="/images/icon/xx.png" class="xx-img" wx:if="{{showSearchPage}}" bindtap="hideSearchPage"></image>
+</view>
+
+<view class="container" wx:if="{{!showSearchPage}}">
   <view class="template-contianer">
     <template is="movieListTemplate" data="{{...inTheaters}}" />
   </view>
@@ -9,5 +16,22 @@
   </view>
   <view class="template-contianer">
     <template is="movieListTemplate" data="{{...top250}}" />
+  </view>
+</view>
+
+<view wx:if="{{showSearchPage}}">
+  <view wx:if="{{showHistory}}" class="history">
+    历史搜索：
+    <view class="flex-column" bindtap="searchByHistory">
+      <block wx:for="{{history}}" wx:key="{{item}}">
+          <text class="history-item" data-history-value="{{item}}">{{item}}</text>
+      </block>
+    </view>
+  </view>
+  <view wx:elif="{{searchResult.length!=0}}">
+    <template is="movieGridTemplate" data="{{movies:searchResult,hasNoMore:false}}" />
+  </view>
+  <view wx:else class="no-data">
+     没有数据
   </view>
 </view>

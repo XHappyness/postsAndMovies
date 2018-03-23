@@ -4,7 +4,8 @@
     "pages/index/index",
     "pages/post/post",
     "pages/post/post-detail/post-detail",
-    "pages/movies/more-movie/more-movie"
+    "pages/movies/more-movie/more-movie",
+    "pages/movies/movie-detail/movie-detail"
   ],
   "window": {
     "navigationBarBackgroundColor": "#405f8a"

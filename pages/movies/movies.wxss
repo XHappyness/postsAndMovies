@@ -1,5 +1,6 @@
 /* pages/movies/movies.wxss */
 @import "movie-list/movie-list-template.wxss";
+@import "movie-grid/movie-grid-template.wxss";
 
 .container  {
   background-color: #F2F2F2;
@@ -8,3 +9,62 @@
 .template-contianer {
   margin-bottom: 40rpx;
 }
+
+.search-container {
+  background-color: #f2f2f2;
+  height: 80rpx;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.search-img {
+  margin-left: 20rpx;
+}
+
+.search-container input {
+  height: 100%;
+  width: 615rpx;
+  font-size: 28rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+}
+
+.placeholder {
+  font-size: 14px;
+  color: #d1d1d1;
+  margin-left: 10rpx;
+}
+
+.xx-img{
+    height: 30rpx;
+    width: 30rpx;
+}
+
+.history {
+  padding: 40rpx;
+  font-size: 32rpx;
+  color: #696969;
+}
+
+.history-item {
+  padding-left:60rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  width: 600rpx;
+  border-top: 1px solid #f8f8f8;
+}
+.history-item:first-child {
+  margin-top: 20rpx;
+  border-top: 0px;
+}
+
+.no-data {
+  display: flex;
+  justify-content: center;
+  padding-top: 40rpx;
+  font-size: 32rpx;
+  color: #696969;
+}
+
