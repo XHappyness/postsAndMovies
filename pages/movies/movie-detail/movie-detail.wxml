@@ -1,1 +1,5 @@
-<view></view>
+<view class="container">
+  <view class="head">
+    <image src=""></image>
+  </view>
+</view>
