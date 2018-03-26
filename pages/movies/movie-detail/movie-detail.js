@@ -1,5 +1,6 @@
 
 var data = require("../../../data/movies-data.js");
+var common = require("../../../common/getStars.js");
 Page({
 
   /**
@@ -22,6 +23,7 @@ Page({
         break;
       }
     }
+    currntMovie.stars = common.convertToStarArray(currntMovie.stars);
     this.setData({
       currntMovie: currntMovie
     });
